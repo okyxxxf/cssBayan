@@ -14,31 +14,43 @@ h3{
     display:flex;
     justify-content: space-between;
 }
+
 .accordeon__mem{
-    width: 80%;
+    width: 70%;
     border-bottom: 2px solid grey;
 }
-/*
-.accordeon__mem:hover img{
-    display:block;
-    animation: sized 0.2s linear;
+@media (min-width:820px){
+    .accordeon__mem:hover img{
+        display:block;
+        animation: sized 0.2s linear;
+    }
+    .accordeon__mem:hover i{
+        animation: rever 0.1s linear;
+        animation-fill-mode: forwards;
+    }
 }
+
 @keyframes sized{
     0%{
         width: 0px;
         height: 0px;
     }
 }
-.accordeon__mem:hover i{
-    animation: rever 0.1s linear;
-    animation-fill-mode: forwards;
-}
 @keyframes rever{
     100%{
         transform: rotate(45deg);
     }
 }
-*/
+.accordeon__mem:has(input:checked) img{
+    display:block;
+    animation: sized 0.2s linear;
+}
+.accordeon__mem:active .accordeon__meme-text{
+    color:blue;
+}
+.accordeon__mem:active img{
+    opacity: 0.7;
+}
 .accordeon__meme-img{
     display: flex;
     justify-content: center;
