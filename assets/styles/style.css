@@ -1,0 +1,56 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 3vh;
+}
+h3{
+    margin: 1%;
+    border-bottom: 2px solid grey;
+}
+.accordeon__text-icon-container{
+    margin-top: 3%;
+    display:flex;
+    justify-content: space-between;
+}
+.accordeon__mem{
+    width: 80%;
+    border-bottom: 2px solid grey;
+}
+/*
+.accordeon__mem:hover img{
+    display:block;
+    animation: sized 0.2s linear;
+}
+@keyframes sized{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+}
+.accordeon__mem:hover i{
+    animation: rever 0.1s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes rever{
+    100%{
+        transform: rotate(45deg);
+    }
+}
+*/
+.accordeon__meme-img{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+.accordeon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordeon__image{
+    width: 60vw;
+    height: 30vh;
+    display: none;
+}
