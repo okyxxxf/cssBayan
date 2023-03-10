@@ -1,0 +1,84 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 3vh;
+    font-weight: bold;
+    font-family: Verdana, Geneva, sans-serif;
+}
+h3{
+    margin: 1%;
+    border-bottom: 2px solid grey;
+}
+.accordeon__text-icon-container{
+    margin-top: 3%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.accordeon__mem{
+    width: 100%;
+    border-bottom: 2px solid grey;
+}
+@media (min-width:820px){
+    .accordeon__mem:hover img{
+        display:block;
+        animation: sized 0.2s linear;
+    }
+    .accordeon__mem:hover {
+        cursor:grab;
+    }
+    .accordeon__mem:hover i{
+        animation: rever 0.1s linear;
+        animation-fill-mode: forwards;
+    }
+    .accordeon:not(:hover) .accordeon__mem:has(input:not(:checked)) .accordeon__meme-text{
+        color:blue;
+    }
+    .accordeon:not(:hover) i{
+        visibility: hidden;
+    }
+}
+
+@keyframes sized{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+}
+@keyframes rever{
+    100%{
+        transform: rotate(45deg);
+    }
+}
+.accordeon__mem:has(input:checked) img{
+    display:block;
+    animation: sized 0.2s linear;
+}
+.accordeon__mem:active .accordeon__meme-text{
+    color:blue;
+}
+.accordeon__mem:active {
+    cursor:grabbing;
+}
+.accordeon__mem:active img{
+    opacity: 0.7;
+}
+.accordeon__meme-img{
+    display: flex;
+    justify-content: center;
+    margin: 1%;
+}
+.accordeon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.accordeon__image{
+    width: 60vw;
+    height: 30vh;
+    display: none;
+}
