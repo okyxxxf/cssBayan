@@ -36,6 +36,9 @@ h3{
     .accordeon:not(:hover) .accordeon__mem:has(input:not(:checked)) .accordeon__meme-text{
         color:blue;
     }
+    .accordeon:not(:hover) i{
+        visibility: hidden;
+    }
 }
 
 @keyframes sized{
